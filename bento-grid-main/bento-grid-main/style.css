@@ -1,0 +1,281 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  font-size: 18px;
+  background-color: hsl(0, 0%, 95%);
+  font-weight: 400;
+  flex-direction: column;
+}
+
+.card-schedulesocial p {
+  margin-top: 10px;
+}
+
+.card-schedulesocial p,
+img,
+h2 {
+  margin-top: 12 px;
+}
+
+.card-schedulesocial img {
+  margin: auto 2px;
+  width: 500px;
+  height: 300px;
+}
+.platformsimg {
+  margin: auto 49px 18px;
+  width: 240px;
+}
+
+.card-platforms {
+  height: 270px;
+}
+
+.card-consistent {
+  height: 270px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Base Card Colors */
+.card-herosection {
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.card-grow {
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+}
+.card-create {
+  background-color: hsl(31, 66%, 93%);
+  justify-content: space-between;
+}
+
+.card-schedulesocial {
+  background-color: hsl(254, 88%, 90%);
+}
+.card-ai {
+  background-color: hsl(39, 100%, 71%);
+  justify-content: space-between;
+}
+.card-consistent {
+  background-color: hsl(39, 100%, 71%);
+}
+.card-platforms {
+  background-color: white;
+}
+.card-audience {
+  background-color: white;
+}
+
+/* Typography Rules */
+.card-herosection h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.card-audience h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.yellow-text {
+  color: hsl(39, 100%, 71%);
+}
+.purple-text {
+  color: hsl(256, 67%, 59%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-grow img {
+  width: 46%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  align-self: flex-start;
+}
+
+.card-herosection img {
+  width: auto;
+  height: 2rem;
+  margin: 0 auto;
+}
+.card-create img,
+.card-ai img {
+  margin-top: auto;
+  border-radius: 12px;
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .card-create {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  .card-ai {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    margin-top: 40px;
+  }
+
+  .card-ai img {
+    margin-top: 40px;
+  }
+
+  .card-herosection {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .card-platforms {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .card-consistent {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  .card-audience {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .card-grow {
+    grid-column: 3 / 5;
+    grid-row: 4;
+  }
+
+  .card-schedulesocial {
+    grid-column: 4;
+    grid-row: 1 / 4;
+  }
+}
+
+.card-grow img {
+  float: left;
+  width: 50%;
+  border-radius: 12px;
+  margin-right: 1.5rem;
+}
+
+.card-grow h2 {
+  float: right;
+  width: 45%;
+}
+
+.card-grow::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* MOBILE  ≤ 700px */
+@media (max-width: 700px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card-grow img {
+    float: left;
+    width: 50%;
+    border-radius: 12px;
+    margin-right: 1.5rem;
+  }
+
+  .card-grow h2 {
+    float: right;
+    width: 95%;
+  }
+
+  .card-grow::after {
+    display: block;
+    clear: both;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card-create,
+  .card-herosection,
+  .card-schedulesocial,
+  .card-platforms,
+  .card-consistent,
+  .card-ai,
+  .card-audience,
+  .card-grow {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .card-herosection {
+    order: 1;
+  }
+  .card-platforms {
+    order: 2;
+  }
+  .card-consistent {
+    order: 3;
+  }
+  .card-schedulesocial {
+    order: 4;
+  }
+  .card-grow {
+    order: 5;
+  }
+  .card-audience {
+    order: 6;
+  }
+  .card-create {
+    order: 7;
+  }
+  .card-ai {
+    order: 8;
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+}
